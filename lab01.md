@@ -8,6 +8,8 @@ title: 汉诺塔问题
     该问题的主要材料包括三根高度相同的柱子和一些
     大小及颜色不同的圆盘，三根柱子分别为起始柱A,
     辅助柱B及目标柱C。
+
+
 ![fdgh](https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=52eaf289a9cc7cd9ee203c8b58684a5a/d50735fae6cd7b896014d3e7052442a7d9330e5e.jpg)
 
 ## 关于汉诺塔
