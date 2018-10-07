@@ -7,7 +7,7 @@ title: 制作html5游戏
 
 ## 成品GIF
 
-![fdgh](\新手游戏.gif)
+![fdgh](http://a2.qpic.cn/psb?/V12ukENm2cNWAn/QOEQlWqNwFX5Mpcu0Oig2MExU8LLfyrs095Vv4Mq.ZY!/m/dDEBAAAAAAAA&rf=albumlist&t=5)
 
 ## 开始
 
