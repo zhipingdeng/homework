@@ -82,17 +82,17 @@ ad an image from a file”并导入之前保存的背景
 
 ![fdgh](https://www.scirra.com/images/articles/player.png)
 
-炮弹：
+子弹：
 
-![fdgh](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1538828517967&di=7dcb90de37fdca017e50f019d61bfee9&imgtype=0&src=http%3A%2F%2Fa0.att.hudong.com%2F84%2F88%2F01000000000000119088821593984_s.jpg)
+![fdgh](https://www.scirra.com/images/articles/Bullet.png)
 
 敌人：
 
 ![fdgh](https://www.scirra.com/images/articles/monster.png)
 
-金币：
+爆炸：
 
-![fdgh](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1538828456428&di=2b0cff5f9609bd96badee6abd8350a74&imgtype=0&src=http%3A%2F%2Fimg.sucaifengbao.com%2Fvector%2Fepssctp%2F313_032_al.jpg)
+![fdgh](https://www.scirra.com/images/articles/explode.png)
 
 双击插入一个“sprite”对象，当鼠标变成一个十字时，
 
@@ -104,7 +104,7 @@ ad an image from a file”并导入之前保存的背景
 
 不会被看到
 
-将这四个对象重命名为“玩家”“子弹”“僵尸”“金币”
+将这四个对象重命名为“玩家”“子弹”“僵尸”“爆炸”
 
 ## 添加“behaviors”
 
@@ -173,7 +173,7 @@ ad an image from a file”并导入之前保存的背景
 
 ## 添加游戏功能
 
-### 炮弹射击
+### 子弹射击
 
 ![fdgh](https://www.scirra.com/images/articles/spawnbullet1.png)
 
@@ -183,13 +183,13 @@ ad an image from a file”并导入之前保存的背景
 
 ### 消灭怪物
 
-Condition: 炮弹 -> On collision with another object -> pick 怪物.
+Condition: 子弹 -> On collision with another object -> pick 怪物.
 
 Action: 怪物 -> Destroy
 
-Action: 炮弹 -> Spawn another object -> 金币, layer 1
+Action: 子弹 -> Spawn another object -> 爆炸, layer 1
 
-Action: 炮弹 -> Destroy
+Action: 子弹 -> Destroy
 
 ### 使怪物更加聪明
 
@@ -215,7 +215,7 @@ Action: 怪物 -> set angle toward (玩家.X,玩家.Y)
 
 再将
 
-Condition: 炮弹 -> On collision with another object -> pick 怪物.
+Condition: 子弹 -> On collision with another object -> pick 怪物.
 
 Action: 怪物 -> Destroy
 
@@ -225,7 +225,7 @@ Action: 怪物 -> Destroy
 
 Condition: 怪物 -> Compare instance variable -> Health, Less or equal, 0
 
-Action: 怪物 -> Spawn another object -> 金币, layer 1
+Action: 怪物 -> Spawn another object -> 爆炸, layer 1
 
 Action: 怪物 -> Destroy
 
@@ -267,11 +267,11 @@ Condition: 玩家 -> On collision with another object -> pick 怪物.
 
 Action: 玩家 -> Destroy
 
-Action: 炮弹 -> Spawn another object -> 金币, layer 1
+Action: 子弹 -> Spawn another object -> 爆炸, layer 1
 
-Action: 炮弹 -> Destroy
+Action: 子弹 -> Destroy
 
-Action: 炮弹 -> Destroy
+Action: 子弹 -> Destroy
 
 Action：Textbox ->set text to "Game over"
 
