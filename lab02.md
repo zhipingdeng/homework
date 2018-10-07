@@ -72,11 +72,19 @@ ad an image from a file”并导入之前保存的背景
 
 同样插入“Keyboard”对象
 
-注意:这些对象不需要放置在layout。 他们是隐藏的,项目范围的自动工作。 现在所有的layout在我们的项目可以接受鼠标和键盘输入。
+注意:这些对象不需要放置在layout。 他们是隐藏
+
+的,项目范围的自动工作。 现在所有的layout在我
+
+们的项目可以接受鼠标和键盘输入。
 
 ### 游戏对象
 
 以下是游戏对象的图片，将它们保存在电脑上
+
+（若以下图片不符合你的审美，可以自行在网
+
+上索图）
 
 玩家：
 
@@ -129,6 +137,10 @@ ad an image from a file”并导入之前保存的背景
 ### 创建更多的怪物
 
 按住ctrl键，拖动怪物，产生新的怪物,共产生7~8个怪物
+
+### 让爆炸更加真实
+
+选中爆炸实例，将effect中的normal改为additive
 
 ## event事件
 
@@ -221,6 +233,12 @@ Action: 怪物 -> Destroy
 
 中的Destroy改变为subtract 1 from health
 
+别忘了要将
+
+Action: 子弹 -> Spawn another object -> 爆炸, layer 1
+
+给delete（否则就变成一发子弹没打死怪物，却产生了爆炸）
+
 然后添加下列事件
 
 Condition: 怪物 -> Compare instance variable -> Health, Less or equal, 0
@@ -282,3 +300,11 @@ Action：Textbox ->set text to "Game over"
 Condition: System -> Every X seconds -> 3
 
 Action: System -> Create object -> 怪物, layer 1, 1400 (for X), random(1024) (for Y)
+
+## 调整游戏难度
+
+通过调整怪物的移动速度，怪物的health值以及
+
+怪物生成的频率和数量来调整游戏难度（即使是
+
+小游戏也能把你虐的不要不要的哦）
