@@ -51,6 +51,7 @@ RAM的地址被分为两部分，其中第一部分地址用来储存指令，�
 8位
 
 4）	写出该程序对应的 C语言表达
+
 ...C
     #include<stdio.h>
     int main(){
@@ -76,6 +77,7 @@ RAM的地址被分为两部分，其中第一部分地址用来储存指令，�
 给赋X一非零初值，进入循环，每次循环X减去1，直到X为1时ACC寄存器存着0，程序结束。
 
 2）写出对应的 c 语言程序
+
 ...C
     #include<stdio.h>
     int main(){
@@ -86,12 +88,14 @@ RAM的地址被分为两部分，其中第一部分地址用来储存指令，�
 	    return 0;
     }
 ...
+
 ## （2）修改该程序，用机器语言实现 10+9+8+..1 ，输出结果存放于内存 Y
 
 ![fdgh](http://m.qpic.cn/psb?/V12ukENm2cNWAn/PSSKsAb4L0QWyL46QFg1Ipgfq87oem*AQkbi6QiNqFM!/b/dDABAAAAAAAA&bo=bQKtAgAAAAADF*I!&rf=viewer_4)
 ![fdgh](http://m.qpic.cn/psb?/V12ukENm2cNWAn/7WyhVRiLusB4DXiPkS2N8VXhdK2yhQqh0P.s9aB2U8s!/b/dDYBAAAAAAAA&bo=bQJqAgAAAAADFzU!&rf=viewer_4)
 
 1）写出 c 语言的计算过程
+
 ...C
     #include<stdio.h>
     int main(){
@@ -103,6 +107,7 @@ RAM的地址被分为两部分，其中第一部分地址用来储存指令，�
         return 0;
     }
 ...
+
 2） 写出机器语言的计算过程
 
 对变量X和Y分别赋初值10和0，再用循环，每次先LOD Y，再ADD X然后将该值赋给Y，即STO Y ，然后X减去1，每次均设条件跳转JMZ 16语句判断ACC当前值是否为0，若为零，则跳出循环，此时Y即为结果，若不为零，则经过无条件跳转语句JMP 0回到LOD X那一步，直至X=1即ACC寄存器存着0时。
