@@ -3,8 +3,6 @@ layout: default
 title: 制作进阶html5游戏
 ---
 
-# 游戏成果gif
-![fdgh]()
 
 # 游戏策划
 ## 游戏setting
@@ -16,13 +14,21 @@ enemy：海盗船
 
 胜利条件：接触3只商船
 
+![fdgh](http://m.qpic.cn/psb?/V12ukENm2Puji7/aBJWHpXD.H3jh7fC0Pnv14AUCO96dhjSWq2rkFi1tiw!/b/dFIBAAAAAAAA&bo=UAYrAwAAAAACl80!&rf=viewer_4)
+
 失败条件：
 
 1.触碰岛礁 
 
+![fdgh](http://m.qpic.cn/psb?/V12ukENm2Puji7/ZFA2CR0YpxZ19U4Pgp7BI7wpeC*D0iyVU1bexnmIEc0!/b/dC8BAAAAAAAA&bo=UAYrAwAAAAACl80!&rf=viewer_4)
+
 2.任意一只商船被劫 
 
+![fdgh](http://m.qpic.cn/psb?/V12ukENm2Puji7/Ao3wYvWgD3w7GOzyKayUPsI6DgjegDkNMRh9pnTnWiQ!/b/dGcBAAAAAAAA&bo=UAYrAwAAAAACh90!&rf=viewer_4)
+
 3.使用导弹误伤商船
+
+![fdgh](http://m.qpic.cn/psb?/V12ukENm2Puji7/J1Hz8Uex8UlYwVUYHdGi6VTHrK5cd13uKH0XKffPVoQ!/b/dEcBAAAAAAAA&bo=UAYrAwAAAAACh90!&rf=viewer_4)
 
 Bonus条件：用导弹消灭海盗船
 
