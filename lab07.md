@@ -3,6 +3,8 @@ layout: default
 title: 硬件编程-机器指令编程
 ---
 
+# 实验报告链接
+[硬件编程-机器指令编程.pdf](硬件编程-机器指令编程.pdf)
 # 任务1：简单程序
 ## （1）打开网页 The PIPPIN User’s Guide ，然后输入 Program 1：Add 2 number
 ![fdgh](http://m.qpic.cn/psb?/V12ukENm2cNWAn/cTIAdmdDj54xqmKgvfe2sX0TNw14NSdV1biDQuw4tSo!/b/dDYBAAAAAAAA&bo=agKyAgAAAAADB*o!&rf=viewer_4)
