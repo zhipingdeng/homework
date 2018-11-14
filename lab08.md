@@ -1,111 +1,149 @@
 ---
 layout: default
-title: lab08
+title: 制作进阶html5游戏
 ---
-# 编程方法：自顶向下，逐步求精（Top-down design）
-
-## 简介
-A top-down approach (also known as stepwise design and in some cases used as a synonym of decomposition) is essentially the breaking down of a system to gain insight into its compositional sub-systems in a reverse engineering fashion. In a top-down approach an overview of the system is formulated, specifying, but not detailing, any first-level subsystems. Each subsystem is then refined in yet greater detail, sometimes in many additional subsystem levels, until the entire specification is reduced to base elements. A top-down model is often specified with the assistance of "black boxes", which makes it easier to manipulate. However, black boxes may fail to clarify elementary mechanisms or be detailed enough to realistically validate the model. Top down approach starts with the big picture. It breaks down from there into smaller segments.
 
 
-## Top-down design的应用
+# 游戏策划
+## 游戏setting
+某国的3只商船被一只海盗舰队追赶，不幸进入岛礁地带。某国的一艘救援船正好在附近巡逻。接收到商船的求救信号后，救援船立刻前往救援。救援船须在海盗船接触到商船前在不触碰岛礁的情况下接触三只商船，你只有5发导弹。。。
+## 游戏设定
+player：救援船
 
-Top-down design是一种应用很广泛的思想。除了编程外，它还出现在生产车间，产品包装等地方。
+enemy：海盗船
 
-以下为产品包装Top-down design图：
+胜利条件：接触3只商船
 
-![fdgh](https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2097789968,2383457928&fm=26&gp=0.jpg)
+![fdgh](http://m.qpic.cn/psb?/V12ukENm2Puji7/aBJWHpXD.H3jh7fC0Pnv14AUCO96dhjSWq2rkFi1tiw!/b/dFIBAAAAAAAA&bo=UAYrAwAAAAACl80!&rf=viewer_4)
 
-洗衣机也有Top-down design的思想
+失败条件：
 
-# 洗衣机案例
-## 提供的洗衣程序
-water_in_switch(open_close) // open 打开上水开关，close关闭
+1.触碰岛礁 
 
-water_out_switch(open_close) // open 打开排水开关，close关闭
+![fdgh](http://m.qpic.cn/psb?/V12ukENm2Puji7/ZFA2CR0YpxZ19U4Pgp7BI7wpeC*D0iyVU1bexnmIEc0!/b/dC8BAAAAAAAA&bo=UAYrAwAAAAACl80!&rf=viewer_4)
 
-get_water_volume() //返回洗衣机内部水的高度
+2.任意一只商船被劫 
 
-motor_run(direction) // 电机转动。left左转，right右转，stop停
+![fdgh](http://m.qpic.cn/psb?/V12ukENm2Puji7/Ao3wYvWgD3w7GOzyKayUPsI6DgjegDkNMRh9pnTnWiQ!/b/dGcBAAAAAAAA&bo=UAYrAwAAAAACh90!&rf=viewer_4)
 
-time_counter() // 返回当前时间计数，以秒为单位
+3.使用导弹误伤商船
 
-halt(returncode) //停机，success 成功 failure 失败
-## 正常洗衣程序的大步骤
-```
-READ 洗衣模式
+![fdgh](http://m.qpic.cn/psb?/V12ukENm2Puji7/J1Hz8Uex8UlYwVUYHdGi6VTHrK5cd13uKH0XKffPVoQ!/b/dEcBAAAAAAAA&bo=UAYrAwAAAAACh90!&rf=viewer_4)
 
-READ 对应水位
+Bonus条件：用导弹消灭海盗船
 
-注水
+equipment：5发导弹（可破坏任意事物）
 
-浸洗
+## 游戏操作
+方向键：
 
-洗涤
+控制救援船移动
 
-电机转动
+鼠标：
 
-排水
+1.移动时控制救援船射击方向
 
-电机转动
+ 2.左键射击
 
-停机
-```
-## 洗衣机伪代码
-```
-READ Mode
 
-WHILE 水位 < Mode对应水位
+# 游戏设计CRC卡片
+## 卡片1
+Object Name：救援船
 
-　　　　water_in_switch(open)
+Attributes:
+![fdgh](http://m.qpic.cn/psb?/V12ukENm2Puji7/17ZzyCxoPGPIGVHJw8AJ15OHFzzo7oW4VVI37VAoPcU!/b/dFQBAAAAAAAA&bo=ggBCAAAAAAADB.I!&rf=viewer_4)
 
-ENDWHILE
+Collaborator：Sprite
 
-water_in_switch(close)
+Events&Actions：
 
-SET time_counter() to 0(ms)
+1.鼠标左键时，发射一颗导弹
 
-WHILE time_counter() < 180000(ms)(30min)
+2.与礁石碰撞后消失，游戏结束
 
-　　　　motor_run(stop)
+3.与商船碰撞后商船消失，Goal加1
 
-ENDWHILE
+## 卡片2
+Object Name：商船
 
-SET time_counter() to 0
+Attributes:
+![fdgh](http://m.qpic.cn/psb?/V12ukENm2Puji7/Z3I1UV*4cGfyQflQa*TyA*2knkZbp73slkPS9dOFLU4!/b/dFIBAAAAAAAA&bo=rwCjAAAAAAADFz4!&rf=viewer_4)
 
-WHILE time_counter() <36000(ms)(6min)
+Collaborator：Sprite
 
-　　　　IF time_counter() < 18000(ms)(3min) THEN
+Events&Actions：
 
-　　　　　　　　motor_run(left)
+1.与救援船碰撞后消失并生成金币
 
-　　　　ELSE
+2.与海盗船碰撞后消失，游戏结束
 
-　　　　　　　　motor_run(right)
+3.与导弹碰撞后消失，导弹也消失，生成爆炸，游戏结束
+## 卡片3
+Object Name：海盗船
 
-　　　　ENDIF
+Attributes:
+![fdgh](http://m.qpic.cn/psb?/V12ukENm2Puji7/0mvBUH3BHDKo8rdF3VwBhtYBMt6vvxyS2K25vp6KQdQ!/b/dFYAAAAAAAAA&bo=tACnAAAAAAADFyE!&rf=viewer_4)
 
-ENDEHILE
+Collaborator：Sprite
 
-motor_run(stop)
+Events&Actions：
 
-WHILE 水位 > 0
+1.与商船碰撞后商船消失，游戏结束
 
-　　　　water_out_switch(open)
+2.与导弹碰撞后消失，导弹也消失，生成爆炸，Bonus加1
 
-ENDWHILE
+## 卡片4
+Object Name：礁石
 
-water_out_switch(close)
+Attributes:
+![fdgh](http://m.qpic.cn/psb?/V12ukENm2Puji7/w6EaB.iW045y5kRtBdnIZGpHMvu5P*hdNYtJi.BMyQo!/b/dDQBAAAAAAAA&bo=egB.AAAAAAADFzY!&rf=viewer_4)
 
-SET time_counter() to 0
+Collaborator：Sprite
 
-WHILE time_counter() < 24000(ms)(4min)
+Events&Actions：
 
-　　　　motor_run(left)
+1.与救援船碰撞后救援船消失，游戏结束
 
-ENDWHILE
+2.与导弹碰撞后消失，导弹也消失
+## 卡片5
+Object Name：导弹
 
-HALT(success)
-```
-# 总结
-在洗衣案例中，将整个洗衣程序划分为选择模式、注水、浸水、电机转动、等板块，体现了自顶向下，逐步求精的思想
+Attributes:
+![fdgh](http://m.qpic.cn/psb?/V12ukENm2Puji7/yv*W*oMrDmD7eXkJMmdtiEGkpdEKCaGLRZxJVjmYjJk!/b/dDEBAAAAAAAA&bo=GQAQAAAAAAADFzs!&rf=viewer_4)
+
+Collaborator：Sprite
+
+Events&Actions：
+
+1.与礁石碰撞后消失，礁石也消失，生成爆炸
+
+2.与商船碰撞后消失，商船也消失，生成爆炸，游戏结束
+
+3.与海盗船碰撞后消失，海盗船也消失，生成爆炸，Bonus加1
+## 卡片6
+Object Name：爆炸
+
+Attributes:
+![fdgh](http://m.qpic.cn/psb?/V12ukENm2Puji7/z6764q7KoklD.eZEM2q9JEU07Df.Krr6URelV8g86cc!/b/dDYBAAAAAAAA&bo=dgBlAAAAAAADFyE!&rf=viewer_4)
+
+Collaborator：Sprite
+
+Events&Actions：
+
+1.在导弹与礁石碰撞时生成，逐渐消失
+
+2.在导弹与商船碰撞时生成，逐渐消失
+
+3.在导弹与海盗船碰撞时生成，逐渐消失
+## 卡片7
+Object Name：金币
+
+Attributes:
+![fdgh](http://m.qpic.cn/psb?/V12ukENm2Puji7/AIrvFIPZazYzcg62tAOX1SXq*YKRTOyT1dfe1G6CmrE!/b/dFMBAAAAAAAA&bo=ZABaAAAAAAADFww!&rf=viewer_4)
+
+Collaborator：Sprite
+
+Events&Actions：
+1.在救援船与商船碰撞时生成，逐渐消失
+
+
