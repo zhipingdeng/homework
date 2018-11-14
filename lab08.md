@@ -13,6 +13,7 @@ A top-down approach (also known as stepwise design and in some cases used as a s
 Top-down design是一种应用很广泛的思想。除了编程外，它还出现在生产车间，产品包装等地方。
 
 以下为产品包装Top-down design图：
+
 ![fdgh](https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2097789968,2383457928&fm=26&gp=0.jpg)
 
 洗衣机也有Top-down design的思想
