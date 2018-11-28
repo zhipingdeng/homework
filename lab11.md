@@ -4,6 +4,7 @@ title: lab11
 ---
 
 # AI的责任问题
+
 ![fdgh](http://www.qstheory.cn/science/2015-06/09/1115561256_14338367206301n.jpg)
 
 　　美国宇航局的机器宇航员2 号 图片来源：Joseph Bibby
