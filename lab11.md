@@ -1,6 +1,6 @@
 ---
 layout: default
-title: hw11
+title: lab11
 ---
 
 # AI的责任问题
