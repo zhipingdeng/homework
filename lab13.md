@@ -1,12 +1,9 @@
 ---
 layout: default
-title: lab13
+title: lab12
 ---
-# IT风投
-![fdgh]()
-## IT风投事件
-### 
+# 字符游戏-贪吃蛇
 
-### 
+[snake_move.c](snake_move.cpp)
 
-## 风投与中国
+[snake_eat.c](snake_eat.cpp)
