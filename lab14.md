@@ -5,9 +5,6 @@ title: lab13
 # IT风投
 
 
-![fdgh](https://img-blog.csdn.net/20171219173400969?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvRXhjZWY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-
-
 风投全名为风险投资，从投资行为的角度来讲，风险投资是把资本投向蕴藏着失败风险的高新技术及其产品的研究开发领域，旨在促使高新技术成果尽快商品化、产业化，以取得高资本收益的一种投资过程。从运作方式来看，是指由专业化人才管理下的投资中介向特别具有潜能的高新技术企业投入风险资本的过程，也是协调风险投资家、技术专家、投资者的关系，利益共享，风险共担的一种投资方式。从风险投资的概述上就可以知道风险投资与IT脱不了干系。 
 
 
