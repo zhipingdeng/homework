@@ -248,4 +248,6 @@ int moveTO(void){
 ![fdgh](http://m.qpic.cn/psb?/V12ukENm2Puji7/y4qhxW*kdywwDQytRaFt4mYea0T*6cvCUW84CUKaAzE!/b/dL0AAAAAAAAA&bo=ngJTAgAAAAACF*4!&rf=viewer_4)
 
 ## 总结
-智能蛇是字符蛇的进阶，增加一个函数就能使蛇变得智能，我认为者很有趣。同时sin函数以及kbhit函数的实现也十分有趣。在Linux环境进行程序编译和执行也很有趣。
+智能蛇是字符蛇的进阶，增加一个函数就能使蛇变得智能，我认为者很有趣。
+
+同时sin函数以及kbhit函数的实现也十分有趣。在Linux环境进行程序编译和执行也很有趣。
