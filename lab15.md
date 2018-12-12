@@ -12,7 +12,7 @@ title: lab13
 3.智能蛇的实现
 
     3.1智能蛇moveTO函数
-    3.2智能蛇代码及效果图
+    3.2能蛇代码及效果图
     3.3长度为5的障碍物困死蛇
 4.总结
 ## sin函数实验
@@ -112,14 +112,12 @@ char map[12][13]=
 	"*          *",
 	"*          *",
 	"************"};
-
 int snakeX[SNAKE_MAX_LENGTH]={5,4,3,2,1};         //蛇身和蛇头的坐标 
 int snakeY[SNAKE_MAX_LENGTH]={1,1,1,1,1};
 int snakeLength=5;                  //蛇身初始长度 
 int gamefail=0;//判断游戏是否结束
 int foodX=1;//初始化食物坐标 
 int foodY=1;
-
 int main(){
 	int direction='d';//初始方向 
 	int predirection='d';//判断是否转向 
@@ -130,7 +128,6 @@ int main(){
 		usleep(500000); 
 		system("cls");
 		predirection=moveTO();//自动改变方向
-		
 		switch(direction){//判断是否转向 
 			case 'w': 
 				if(predirection=='a'||predirection=='d')
@@ -183,12 +180,9 @@ void snakeMove(int dx,int dy){
 	snakeX[0]+=dx;
 	snakeY[0]+=dy;
 	
-	map[snakeY[0]][snakeX[0]]=SNAKE_HEAD;
-			
+	map[snakeY[0]][snakeX[0]]=SNAKE_HEAD;	
 } 
 void put_money(void){//  随机投放食物
-	     
-
     srand(time(0)); //  初始化食物随机
     while (1) { //  一直循环随机直到出现可行坐标 
         foodX=(rand() % 11)+1; foodY=(rand() % 11)+1;    //  随机一个坐标 
@@ -197,7 +191,6 @@ void put_money(void){//  随机投放食物
             return;     //  跳出 
         }  
     }
-    
 }
 void output(void){//输出图表 
 	int i;
@@ -218,7 +211,6 @@ int moveTO(void){
 	else{
 		distance[0]=9999;
 	}
-	
 	if(map[snakeY[0]][snakeX[0]-1]==BLANK_CELL||map[snakeY[0]][snakeX[0]-1]==SNAKE_FOOD){
 		distance[1]=fabs(snakeY[0]-foodY)+fabs(snakeX[0]-1-foodX);
 	}
@@ -252,8 +244,6 @@ int moveTO(void){
 ![fdgh](http://m.qpic.cn/psb?/V12ukENm2Puji7/yxZLTuEJu9FcdNXXzSdW.C8jh36KBVybGl1voufkw1w!/b/dL4AAAAAAAAA&bo=agNTAgAAAAACFws!&rf=viewer_4)
 
 ### 长度为5的障碍物困死蛇
-
-
 
 ![fdgh](http://m.qpic.cn/psb?/V12ukENm2Puji7/y4qhxW*kdywwDQytRaFt4mYea0T*6cvCUW84CUKaAzE!/b/dL0AAAAAAAAA&bo=ngJTAgAAAAACF*4!&rf=viewer_4)
 
