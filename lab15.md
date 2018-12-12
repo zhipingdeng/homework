@@ -16,7 +16,7 @@ title: lab13
     3.3长度为5的障碍物困死蛇
 4.总结
 ## sin函数实验
-    在ubuntu创建文件并复制函数（去除注释）后，效果图如下：
+在ubuntu创建文件并复制函数（去除注释）后，效果图如下：
 
 ![fdgh](http://m.qpic.cn/psb?/V12ukENm2Puji7/OZv7PxIDa0RM5Z9fp1p1f25hE*nEOQr8oDd0Id2j3jQ!/b/dFIBAAAAAAAA&bo=agNTAgAAAAACFws!&rf=viewer_4)
 
