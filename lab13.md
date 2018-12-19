@@ -1,6 +1,6 @@
 ---
 layout: default
-title: lab12
+title: lab13
 ---
 # 字符游戏-贪吃蛇
 

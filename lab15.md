@@ -1,6 +1,6 @@
 ---
 layout: default
-title: lab13
+title: lab15
 ---
 
 # 智能蛇实验报告
